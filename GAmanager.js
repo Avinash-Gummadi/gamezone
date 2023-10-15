@@ -1,10 +1,9 @@
 // GA connection
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-gtag('config', 'G-SZFBCWJG55');
-
+  gtag('config', 'G-Z919LB7J96');
 
 // Function to send a custom event to Google Analytics
   function GAEvent(category, action, label, value) {
@@ -14,6 +13,3 @@ gtag('config', 'G-SZFBCWJG55');
       'event_value': value
     });
   }
-
-  // Example usage of the function
-  GAEvent('Button Click', 'Click', 'Custom Button Click', 1);
