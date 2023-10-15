@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    background-image: url('./images/background2.jpg');
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    max-width: 1200px;
+    /* Limit the width to make it responsive */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+    width: 100%;
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-card {
+    width: calc(33.33% - 20px);
+    /* Adjust to create a 3-column layout with margin */
+    margin: 10px;
+    /* Adjust margin for spacing */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+/* Advanced styles for .game-card */
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-width: 2px;
+    transform: rotate(5deg);
+    transform: rotate(3deg) translateX(5px);
+    animation: pulse 0.5s infinite;
+}
+
+/* Add a subtle pulsation effect on hover */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Adjust card styles for smaller screens */
+@media (max-width: 768px) {
+    .game-card {
+        width: calc(50% - 10px);
+    }
+}
+
+/* Add responsive styles for even smaller screens */
+@media (max-width: 480px) {
+    .game-card {
+        width: 100%;
+    }
+}
+
+img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    animation: scaleUp 1s ease infinite;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    text-align: center;
+    margin: 20px 0 10px;
+    animation: scaleUp 1s ease infinite;
+    background: linear-gradient(140deg, #390bf3, #FFD700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes scaleUp {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Add a decorative underline */
+h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007BFF;
+    margin: 10px auto;
+    background: linear-gradient(140deg, #390bf3, #FFD700);
+}
+
+/* Add an advanced animation to .game-card img on hover */
+.game-card img {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.game-card img:hover {
+    transform: scale(1.1) rotate(10deg);
+    /* Scale and rotate the image */
+}
