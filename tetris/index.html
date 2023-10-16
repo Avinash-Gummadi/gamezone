@@ -6,24 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Tetris</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../advert.css">
 </head>
 
 <body>
+    <!-- Left Advertisement -->
+    <div class="advertisement left" style="left: 10px;">
+        <p>For Advertisements ping to me <a href="https://wa.me/8889997776" target="_blank">8889997776</a></p>
+    </div>
     <div class="container">
+        <div class="game-overlay" id="game-overlay">
+            <div class="phone-menu next-bricks-frame">
+                <h2>PAUSED</h2>
+                    <ul>
+                        <li><a href="javascript:void(0);" onclick="resumeGame();">Resume</a></li>
+                        <li><a href="javascript:void(0);" onclick="howToPlay();">How to Play</a></li>
+                        <li><a href="javascript:void(0);" onclick="quitGame();">Quit</a></li>
+                    </ul>
+            </div>
+            <div class="instructions" id="instructions_id">
+                <h3>How to Play Tetris</h3>
+                <ul>
+                    <li><strong>Objective:</strong> Clear lines by stacking tetriminos to earn points.</li>
+                    <li><strong>Controls:</strong> Use arrow keys to move and rotate tetriminos.</li>
+                    <li><strong>Clear Lines:</strong> Complete horizontal lines to make them disappear.</li>
+                    <li><strong>Scoring:</strong> Earn points for cleared lines, especially for "Tetris" (four lines at once).</li>
+                    <li><strong>Game Speed:</strong> The game gets faster as you progress.</li>
+                    <li><strong>Game Over:</strong> It ends when tetriminos reach the top.</li>
+                    <li><strong>Strategy:</strong> Focus on clearing lines efficiently.</li>
+                    <li><strong>Practice:</strong> Improving takes time, so keep playing and enjoy the challenge.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="game-overlay" id="game-overlay2">
+            <div class="game-over-content">
+                <h1 class="game-over-text">Game Over</h1>
+                <h3>Score: <span id="score-over"></span> </h3>
+                <button class="btn btn-over" id="over-button" onclick="startOver()">Start Over</button>
+            </div>
+        </div>        
+
         <div id="game-container">
             <div id="phone-frame">
                 <canvas id="tetris-board" width="300" height="600"></canvas>
             </div>
             <div id="game-info">
-                <div id="next-bricks-frame">
+                <div class="next-bricks-frame">
                     <canvas id="next-bricks" width="120" height="240"></canvas>
                 </div>
-                <h1>Advanced Tetris</h1>
+                <h1 class="advanced-heading">Tetris</h1>
                 <div id="score">Score: <span>0</span></div>
                 <button id="start-button" class="btn btn-start" onclick="playButtonClicked();">Start</button>
                 <button id="pause-button" class="btn btn-pause" onclick="togglePause();">Pause</button>
             </div>
         </div>
+    </div>
+    <!-- Right Advertisement -->
+    <div class="advertisement right" style="right: 10px;">
+        <p>For Advertisements ping to me <a href="https://wa.me/8889997776" target="_blank">8889997776</a></p>
     </div>
     <audio id="clearsound" src="sound/pop.ogg" preload="auto"></audio>
     <script src="js/tetris.js"></script>

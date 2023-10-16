@@ -3,7 +3,8 @@ body {
     padding: 0;
     background-color: #f0f0f0;
 }
-.container{
+
+.container {
     width: 1000px;
     margin: auto;
 }
@@ -14,20 +15,21 @@ body {
     background-color: #333;
     border: 10px solid #555;
     border-radius: 30px;
-    margin: 0px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
-#next-bricks-frame {
-    width: 160px; /* Adjust width as needed */
-    height: 320px; /* Adjust height as needed */
+
+.next-bricks-frame {
+    width: 160px;
+    /* Adjust width as needed */
+    height: 320px;
+    /* Adjust height as needed */
     background-color: #333;
     border: 5px solid #555;
     border-radius: 15px;
-    margin: 0 20px; /* Add margin to separate it from the main phone frame */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,12 +52,45 @@ body {
 #game-info {
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-h1 {
+/* Define styles for the advanced heading */
+.advanced-heading {
     font-size: 36px;
-    color: #444;
+    color: transparent;
+    background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient-flow 4s linear infinite;
     margin: 0;
+}
+
+/* Define a keyframe animation for the gradient flow effect */
+@keyframes gradient-flow {
+    0% {
+        background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+    }
+
+    25% {
+        background-image: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+    }
+
+    50% {
+        background-image: linear-gradient(180deg, #ff00ff, #00ffff, #ff00ff);
+    }
+
+    75% {
+        background-image: linear-gradient(270deg, #ff00ff, #00ffff, #ff00ff);
+    }
+
+    100% {
+        background-image: linear-gradient(360deg, #ff00ff, #00ffff, #ff00ff);
+    }
 }
 
 #score {
@@ -78,8 +113,216 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 110px;
+}
+.btn-pause {
+    display: none;
 }
 
 .btn-start:hover {
     background-color: #006f8e;
+}
+
+
+/* Add CSS for the game overlay and phone menu */
+.game-overlay {
+    display: none;
+    position: absolute;
+    top: 1px;
+    left: 16%;
+    width: 68%;
+    height: 96%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    animation: dropOverlay 1s ease-in-out forwards;
+    border-radius: 5px;
+}
+@keyframes dropOverlay {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/*  */
+/* Styles for the game-over content */
+.game-over-content {
+    background: linear-gradient(45deg, #0c29db, #5b8e00);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    animation: fadeIn 0.7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: scale(0.9);
+    margin-top: 200px;
+}
+
+.game-over-text {
+    font-size: 3rem;
+    color: #ff0000;
+    margin: 0;
+    animation: bounce 1s infinite alternate;
+}
+
+h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#score-over {
+    color: #ff0000;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: scaleUp 1s;
+}
+
+.btn-over {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #cee549, #ff0000);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    width: 190px;
+}
+
+.btn-over:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframe animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/*  */
+
+.phone-menu {
+    padding: 20px;
+    margin-right: 325px;
+    text-align: center;
+    height: 240px;
+}
+
+.phone-menu h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.phone-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.phone-menu li {
+    margin: 10px 0;
+}
+
+.phone-menu li a {
+    font-size: 20px;
+    display: block;
+    padding: 5px 20px;
+    text-decoration: none;
+    background-color: #000000;
+    color: white;
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-weight: bold;
+}
+.phone-menu li a:hover {
+    background-color: #006f8e;
+    border-color: #006f8e;
+}
+
+/* Styles for the instructions with animation */
+.instructions {
+    display: none;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: -200px;
+    right: 16px;
+    width: 442px;
+    background-color: #333;
+    animation: dropInstructions 2s ease-in-out forwards;
+}
+
+@keyframes dropInstructions {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    75% {
+        transform: translateY(240px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(210px);
+        opacity: 1;
+    }
+}
+
+.instructions h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instructions li {
+    margin: 10px 0;
+}
+
+.instructions li strong {
+    font-weight: bold;
 }

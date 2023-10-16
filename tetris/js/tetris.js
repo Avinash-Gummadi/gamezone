@@ -132,6 +132,7 @@ function clearLines() {
     }
     // Update the score display on the HTML page
     document.getElementById('score').getElementsByTagName('span')[0].innerText = score;
+    document.getElementById('score-over').innerText = score;
 }
 
 function keyPress(key) {
@@ -185,7 +186,7 @@ function valid(offsetX, offsetY, newCurrent) {
                     || x + offsetX >= COLS) {
                     if (offsetY == 1 && freezed) {
                         lose = true; // lose if the current shape is settled at the top most row
-                        document.getElementById('start-button').disabled = false;
+                        document.getElementById('game-overlay2').style.display = 'block';
                     }
                     return false;
                 }
@@ -197,7 +198,8 @@ function valid(offsetX, offsetY, newCurrent) {
 
 function playButtonClicked() {
     newGame();
-    document.getElementById("start-button").disabled = true;
+    document.getElementById("start-button").style.display = 'none';
+    document.getElementById("pause-button").style.display = 'block';
 }
 
 function newGame() {
@@ -219,10 +221,44 @@ function clearAllIntervals() {
 function togglePause() {
     paused = !paused; // Toggle the pause state
     if (paused) {
-        // Display a message or update UI to indicate the game is paused
-        // You can also clear the game interval if desired
+        pauseGame();
     } else {
-        // Remove the pause message or update UI to indicate the game is resumed
-        // You can resume the game interval if it was cleared
+        resumeGame();
     }
+}
+// Add these functions to show/hide the overlay and handle menu options
+function pauseGame() {
+    document.getElementById('game-overlay').style.display = 'flex';
+}
+
+function resumeGame() {
+    paused = false;
+    document.getElementById('game-overlay').style.display = 'none';
+    instructions_id.style.display = 'none'
+}
+
+function quitGame() {
+    resumeGame()
+    document.getElementById("start-button").style.display = 'block';
+    document.getElementById("pause-button").style.display = 'none';
+    clearAllIntervals();
+    score = 0;
+    document.getElementById('score').getElementsByTagName('span')[0].innerText = score; // Update the score display
+    // intervalRender = setInterval(render, 30);
+    // init();
+    // Get a reference to the canvas element and its 2D context
+    let canvas = document.getElementById('tetris-board');
+    let ctx = canvas.getContext('2d');
+
+    // Clear the entire canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+}
+
+function howToPlay() {
+    instructions_id.style.display = 'block'
+}
+function startOver() {
+    document.getElementById('game-overlay2').style.display = 'none';
+    playButtonClicked()
 }

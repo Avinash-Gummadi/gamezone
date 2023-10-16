@@ -175,25 +175,27 @@ var Game = {  // a modified version of the game loop from my previous boulderdas
 
   //---------------------------------------------------------------------------
 
-  stats: function(parentId, id) { // construct mr.doobs FPS counter - along with friendly good/bad/ok message box
+  stats: function(parentId, id) { // construct FPS counter - along with friendly good/bad/ok message box
 
     var result = new Stats();
     result.domElement.id = id || 'stats';
     Dom.get(parentId).appendChild(result.domElement);
 
     var msg = document.createElement('div');
-    msg.style.cssText = "border: 2px solid gray; padding: 5px; margin-top: 5px; text-align: left; font-size: 1.15em; text-align: right;";
-    msg.innerHTML = "Your performance is ";
+    msg.classList.add('performance-container');
+    // msg.style.cssText = "border: 2px solid gray; padding: 5px; margin-top: 5px; text-align: left; font-size: 1.15em; text-align: right;";
+    msg.innerHTML = "<div class='message-container'><span class='message'>Your Performance is </span></div>";
     Dom.get(parentId).appendChild(msg);
 
     var value = document.createElement('span');
-    value.innerHTML = "...";
+    value.classList.add('performance-status');
+    value.innerHTML = "....";
     msg.appendChild(value);
 
     setInterval(function() {
       var fps   = result.current();
-      var ok    = (fps > 50) ? 'good'  : (fps < 30) ? 'bad' : 'ok';
-      var color = (fps > 50) ? 'green' : (fps < 30) ? 'red' : 'gray';
+      var ok    = (fps > 50) ? 'GOOD'  : (fps < 30) ? 'BAD' : 'OK';
+      var color = (fps > 50) ? '#65e865' : (fps < 30) ? 'red' : 'gray';
       value.innerHTML       = ok;
       value.style.color     = color;
       msg.style.borderColor = color;
