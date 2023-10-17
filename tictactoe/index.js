@@ -40,7 +40,7 @@ function about() {
     const gameHelp = document.querySelector('.game-help');
 
     // Add border and box-shadow styles
-    gameHelp.style.border = '1px solid #ccc';
+    gameHelp.style.border = '2px solid #ccc';
     gameHelp.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
 
     // Create a function to reveal the text letter by letter

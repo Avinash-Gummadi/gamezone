@@ -5,6 +5,8 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    background-image: url(../images/background4.jpg);
+    background-size: cover;
 }
 
 /* Center the game container */
@@ -14,6 +16,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin: auto;
+    width: 1000px;
 }
 
 /* Common styles for cells */
@@ -25,18 +29,18 @@ body {
     font-size: 36px;
     font-weight: bold;
     cursor: pointer;
-    background-color: #eaeaea;
+    /* background-color: #eaeaea; */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.cell:hover {
+/* .cell:hover {
     background-color: #d5d5d5;
-}
+} */
 
 /* Style the game board */
 .board-table {
     border-collapse: collapse;
-    background-color: #fff;
+    /* background-color: #fff; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     table-layout: fixed;
 }
@@ -86,9 +90,9 @@ body {
 
 /* Style the game help container */
 .game-help {
-    flex: 1; /* Take up equal space in the remaining flex container */
+    flex: 1;
     padding: 15px 15px 0px 15px;
-    background-color: #f9f9f9; /* Set background color */
+    /* background-color: #f9f9f9; */
     border-radius: 10px;
 }
 
@@ -96,7 +100,8 @@ body {
 .game-help span {
     font-size: 18px;
     line-height: 1.5;
-    color: #333; /* Text color */
+    color: #ffffff;
+    font-weight: bold;
 }
 
 /* Style the buttons */

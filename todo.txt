@@ -2,5 +2,6 @@ keywords
 common readme.md
 links
 GA
-remove unwanted code
+remove unwanted code and unwanted files
 Mix all readme files into one and also LICENSE files
+fevicons for all pages

@@ -9,10 +9,6 @@ html, body {
   font-size: 18px;
 }
 
-body {
-  margin: 8px 0;
-}
-
 .heading:after {
   content: "";
   display: block;

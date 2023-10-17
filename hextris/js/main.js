@@ -351,7 +351,7 @@ function checkGameOver() {
 
 function showHelp() {
 	if ($('#openSideBar').attr('src') == './images/btn_back.svg') {
-		$('#openSideBar').attr('src', './images/btn_help.svg');
+		$('#openSideBar').attr('src', '../images/animate_2.gif');
 		if (gameState != 0 && gameState != -1 && gameState != 2) {
 			$('#fork-ribbon').fadeOut(150, 'linear');
 		}

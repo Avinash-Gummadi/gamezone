@@ -86,19 +86,24 @@ button:focus {
 }
 
 #openSideBar {
-	position:fixed;
-	margin-top:6px;
-	width:72px;
-	height:72px;
-	margin-left:11px;
-	z-index:3003;
-	color:#232323;
-	cursor:pointer;
-	top:0;
-	left:0;
-
+    position: fixed;
+    margin-top: 6px;
+    width: 72px;
+    height: 72px;
+    margin-left: 11px;
+    z-index: 3003;
+    color: #232323;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: perspective(1px) scale(1.05);
 }
-
+#openSideBar:hover {
+    transform: perspective(1px) scale(1.09);
+}
 
 #pauseBtn {
 	display:none;
@@ -204,7 +209,7 @@ button:focus {
 
 
 #highScoreInGameTextHeader {
-	color: #bdc3c7;
+	color: #0a00eb;
 	width:100%;
 }
 
@@ -268,7 +273,7 @@ button:focus {
 	margin-left:-50%;
 	margin-top:-10%;
 	z-index:3000;
-	color:#232323;
+	color: #01177c;
 	text-align:center;
 }
 
@@ -381,6 +386,7 @@ body {
 	height:100%;
 	width:100%;
 	background-color:#ecf0f1;
+	background-color:#0099ac;
 	z-index:0;
 }
 #title {
@@ -389,9 +395,9 @@ body {
 	color:#2c3e50;
 }
 
-#gameoverscreen {
-	/*display:none;*/
-}
+/* #gameoverscreen {
+	display:none;
+} */
 
 #restart{
 	display:none;
@@ -485,9 +491,6 @@ body {
 	line-height:18px;
 }
 
-
-
-
 #bottomContainer {
 	position:absolute;
 	width:100%;
@@ -524,4 +527,23 @@ body {
 	-webkit-transform:translate(-50%, 0%);
 	-moz-transform:translate(-50%, 0%);
 	-ms-transform:translate(-50%, 0%);
+}
+
+.animate-img {
+	width: 350px;
+    height: 350px;
+    position: absolute;
+    bottom: 100px;
+    left: 80px;
+    border-radius: 50%;
+    transform: rotate(345deg);
+}
+
+.ads-h1 {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 80px;
+    left: 460px;
+    border-radius: 50%;
+    color: #1186a8;
 }

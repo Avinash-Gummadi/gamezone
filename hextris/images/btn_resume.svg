@@ -7,8 +7,8 @@
 	<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
 		<g id="Paused" sketch:type="MSArtboardGroup" transform="translate(-275.000000, -565.000000)">
 			<g id="Resume-button" sketch:type="MSLayerGroup" transform="translate(275.000000, 560.000000)">
-				<polygon id="Pause-hex" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(37.500000, 37.500000) rotate(-90.000000) translate(-37.500000, -37.500000) " points="37.5 0 69.9759526 18.75 69.9759526 56.25 37.5 75 5.02404736 56.25 5.02404736 18.75 "></polygon>
-				<path d="M26,24 L26,52 L49,38 L26,24 Z" id="Play-icon" fill="#2C3E50" sketch:type="MSShapeGroup"></path>
+				<polygon id="Pause-hex" fill="#266F12" sketch:type="MSShapeGroup" transform="translate(37.500000, 37.500000) rotate(-90.000000) translate(-37.500000, -37.500000) " points="37.5 0 69.9759526 18.75 69.9759526 56.25 37.5 75 5.02404736 56.25 5.02404736 18.75 "></polygon>
+				<path d="M26,24 L26,52 L49,38 L26,24 Z" id="Play-icon" fill="#FFF" sketch:type="MSShapeGroup"></path>
 			</g>
 		</g>
 	</g>
