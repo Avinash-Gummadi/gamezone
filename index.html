@@ -14,18 +14,24 @@
         content="Welcome to the ultimate games website! Discover a vast collection of thrilling and addictive games for all ages. From action-packed adventures to brain-teasing puzzles. Start playing now and unleash your inner gamer!">
     <meta property="og:image" content="Image which you want to show in social media">
     <title>WebLaunch Kids Games</title>
+    <link rel="shortcut icon" href="./images/fevicon_no_bg.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./rootcss/styles.css">
     <link rel="stylesheet" href="./rootcss/advert.css">
 </head>
 
 <body>
+    <canvas id="cursorcanvas"></canvas>
     <!-- Left Advertisement -->
     <div class="advertisement left">
         <p>For Advertisements ping to me <a href="https://wa.me/8889997776" target="_blank"
                 onclick="GAEvent('Advertisement', 'Click', 'LeftAd', '8889997776')">8889997776</a></p>
     </div>
     <div id="container">
-        <h1>Welcome to WebLaunch Kids</h1>
+        <div class="headbox">
+            <img src="./images/logo_no_bg.png" alt="" srcset="">
+            <h1>Welcome to WebLaunch Kids</h1>
+        </div>
         <div class="game-container">
             <a href="3dracer/" class="game-card" id="game1"
                 onclick="GAEvent('GameBox', 'Click', 'gameCard', '3dracer')">
