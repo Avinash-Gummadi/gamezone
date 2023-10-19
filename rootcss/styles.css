@@ -18,9 +18,7 @@ a {
     margin: auto;
     flex-direction: column;
     max-width: 1200px;
-    /* Limit the width to make it responsive */
     box-sizing: border-box;
-    /* Include padding in width calculation */
     width: 100%;
 }
 
