@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="shortcut icon" href="../images/fevicon_no_bg.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../rootcss/advert.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <audio id="clickSound" autoplay preload="auto">
+        <source src="click.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Left Advertisement -->
+    <div class="advertisement left" style="left: 20px;">
+        <p>For Advertisements ping to me <a href="https://wa.me/8889997776" target="_blank">8889997776</a></p>
+    </div>
+    <div class="game-container">
+        <form name="game">
+            <div class="game-header">
+                <h1>Tic-Tac-Toe</h1>
+            </div>
+            <div class="game-content">
+                <div class="game-board">
+                    <table class="board-table" id="table-board-id">
+                        <tr>
+                            <td class="cell">
+                                <a href="#" onclick="handleClick('A', event)">
+                                    <img src="game3.jpg" border="0" height="100" width="100" name="A" alt="Top-Left">
+                                </a>
+                            </td>
+                            <td class="cell">
+                                <a href="#" onclick="handleClick('B', event)">
+                                    <img src="game3.jpg" border="0" height="100" width="100" name="B" alt="Top-Center">
+                                </a>
+                            </td>
+                            <td class="cell">
+                                <a href="#" onclick="handleClick('C', event)">
+                                    <img src="game3.jpg" border="0" height="100" width="100" name="C" alt="Top-Right">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cell">
+                                <a href="#" onclick="handleClick('D', event)">
+                                    <img src="game3.jpg" border="0" height="100" width="100" name="D" alt="Middle-Left">
+                                </a>
+                            </td>
+                            <td class="cell">
+                                <a href="#" onclick="handleClick('E', event)">
+                                    <img src="game3.jpg" border="0" height="100" width="100" name="E"
+                                        alt="Middle-Center">
+                                </a>
+                            </td>
+                            <td class="cell">
+                                <a href="#" onclick="handleClick('F', event)">
+                                    <img src="game3.jpg" border="0" height="100" width="100" name="F"
+                                        alt="Middle-Right">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cell">
+                                <a href="#" onclick="handleClick('G', event)">
+                                    <img src="game3.jpg" border="0" height="100" width="100" name="G" alt="Bottom-Left">
+                                </a>
+                            </td>
+                            <td class="cell">
+                                <a href="#" onclick="handleClick('H', event)">
+                                    <img src="game3.jpg" border="0" height="100" width="100" name="H"
+                                        alt="Bottom-Center">
+                                </a>
+                            </td>
+                            <td class="cell">
+                                <a href="#" onclick="handleClick('I', event)">
+                                    <img src="game3.jpg" border="0" height="100" width="100" name="I"
+                                        alt="Bottom-Right">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="game-stash">
+                    <div class="game-help">
+                        <span id="typingAnimation"></span>
+                    </div>
+                    <div class="game-info">
+                        <div class="info-container">
+                            <div class="info-item">
+                                <div class="info-label">Eagle (You)</div>
+                                <div class="info-value">
+                                    <input type="text" size="5" name="you" readonly>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Snake (Computer)</div>
+                                <div class="info-value">
+                                    <input type="text" size="5" name="computer" readonly>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Ties</div>
+                                <div class="info-value">
+                                    <input type="text" size="5" name="ties" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="message-container-id"></div>
+
+            <div class="game-controls">
+                <input type="button" value="Play Again" onClick="playAgain();">
+                <input type="button" value="Mute" id="toggleSoundButton" onClick="toggleSound();">
+                <input type="button" value="About" onClick="about();">
+            </div>
+        </form>
+    </div>
+    <!-- Right Advertisement -->
+    <div class="advertisement right" style="right: 20px;">
+        <p>For Advertisements ping to me <a href="https://wa.me/8889997776" target="_blank">8889997776</a></p>
+    </div>
+</body>
+
+</html>
