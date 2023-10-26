@@ -1,9 +1,6 @@
 keywords
-common readme.md
-links
 GA
 remove unwanted code and unwanted files
-Mix all readme files into one and also LICENSE files
 fevicons for all pages and Add logo for all pages
 how it is working in mobile resolution
 check all meta tags

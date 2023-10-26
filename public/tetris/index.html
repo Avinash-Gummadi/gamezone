@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Tetris</title>
+    <link rel="shortcut icon" href="../images/fevicon_no_bg.ico" type="image/x-icon">
+    <title>Tetris</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../rootcss/advert.css">
 </head>
@@ -18,11 +19,11 @@
         <div class="game-overlay" id="game-overlay">
             <div class="phone-menu next-bricks-frame">
                 <h2>PAUSED</h2>
-                    <ul>
-                        <li><a href="javascript:void(0);" onclick="resumeGame();">Resume</a></li>
-                        <li><a href="javascript:void(0);" onclick="howToPlay();">How to Play</a></li>
-                        <li><a href="javascript:void(0);" onclick="quitGame();">Quit</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="javascript:void(0);" onclick="resumeGame();">Resume</a></li>
+                    <li><a href="javascript:void(0);" onclick="howToPlay();">How to Play</a></li>
+                    <li><a href="javascript:void(0);" onclick="quitGame();">Quit</a></li>
+                </ul>
             </div>
             <div class="instructions" id="instructions_id">
                 <h3>How to Play Tetris</h3>
@@ -30,7 +31,8 @@
                     <li><strong>Objective:</strong> Clear lines by stacking tetriminos to earn points.</li>
                     <li><strong>Controls:</strong> Use arrow keys to move and rotate tetriminos.</li>
                     <li><strong>Clear Lines:</strong> Complete horizontal lines to make them disappear.</li>
-                    <li><strong>Scoring:</strong> Earn points for cleared lines, especially for "Tetris" (four lines at once).</li>
+                    <li><strong>Scoring:</strong> Earn points for cleared lines, especially for "Tetris" (four lines at
+                        once).</li>
                     <li><strong>Game Speed:</strong> The game gets faster as you progress.</li>
                     <li><strong>Game Over:</strong> It ends when tetriminos reach the top.</li>
                     <li><strong>Strategy:</strong> Focus on clearing lines efficiently.</li>
@@ -38,14 +40,14 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="game-overlay" id="game-overlay2">
             <div class="game-over-content">
                 <h1 class="game-over-text">Game Over</h1>
                 <h3>Score: <span id="score-over"></span> </h3>
                 <button class="btn btn-over" id="over-button" onclick="startOver()">Start Over</button>
             </div>
-        </div>        
+        </div>
 
         <div id="game-container">
             <div id="phone-frame">
