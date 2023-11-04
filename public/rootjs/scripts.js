@@ -1,3 +1,22 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+
+const i = "@A!Iz%aS`yC&p50xJ##N4W^G(8A@NfG+Fx~sRA0=GeFi!!bTR)uJ-uK_s";
+const k = i.replace(/[^a-zA-Z0-9]/g, "");
+const firebaseConfig = {
+    apiKey: k,
+    authDomain: "crazytechbytes.firebaseapp.com",
+    projectId: "crazytechbytes",
+    storageBucket: "crazytechbytes.appspot.com",
+    messagingSenderId: "433633575352",
+    appId: "1:433633575352:web:2f0a6479c6ba2924aa4f4d",
+    measurementId: "G-9C4GCNZL53"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 const canvas = document.getElementById("cursorcanvas");
 const ctx = canvas.getContext('2d');
 
