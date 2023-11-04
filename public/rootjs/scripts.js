@@ -13,6 +13,8 @@ const firebaseConfig = {
     measurementId: "G-9C4GCNZL53"
 };
 
+console.log("scripts.js version check");
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);

@@ -13,3 +13,4 @@
       'event_value': value
     });
   }
+  console.log("GAmanager.js version check");
