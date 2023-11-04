@@ -1,4 +1,8 @@
 keywords
-common readme.md
-links
 GA
+remove unwanted code and unwanted files
+fevicons for all pages and Add logo for all pages
+how it is working in mobile resolution
+check all meta tags
+
+Read README.md file to enter any missing info like email or website
