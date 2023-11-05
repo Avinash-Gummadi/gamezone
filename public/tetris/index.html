@@ -4,6 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to the ultimate Tetris gaming experience! Dive into the iconic world of block-puzzle gaming and challenge your skills. Play the timeless game of Tetris with a modern twist. Stack, clear lines, and aim for high scores in this addictive puzzle adventure. Explore endless levels, compete with friends, and relive the nostalgia of Tetris. Get ready to arrange the falling blocks and become a Tetris master!">
+    <meta name="keywords"
+        content="Tetris game, block puzzle, classic gaming, block stacking, high score challenge, addictive gameplay, falling blocks, puzzle adventure, skill-testing, endless levels, Tetris nostalgia, competitive play, retro gaming, block-clearing, block arrangement, iconic game, puzzle-solving, timeless gameplay, gaming platform">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="CrazyTechBytes">
+    <meta property="og:description"
+        content="Welcome to the ultimate Tetris gaming experience! Dive into the iconic world of block-puzzle gaming and challenge your skills. Play the timeless game of Tetris with a modern twist. Stack, clear lines, and aim for high scores in this addictive puzzle adventure. Explore endless levels, compete with friends, and relive the nostalgia of Tetris. Get ready to arrange the falling blocks and become a Tetris master!">
+    <meta property="og:image" content="https://games.crazytechbytes.com/images/social_media.png">
+    <meta property="og:url" content="https://games.crazytechbytes.com/tetris/">
     <link rel="shortcut icon" href="../images/fevicon_no_bg.ico" type="image/x-icon">
     <title>Tetris</title>
     <link rel="stylesheet" href="style.css">
@@ -13,7 +23,7 @@
 <body>
     <!-- Left Advertisement -->
     <div class="advertisement left" style="left: 10px;">
-        <p>For Advertisements ping to me <a href="https://wa.me/8889997776" target="_blank">8889997776</a></p>
+        <p>For Advertisements ping to me <a href="https://wa.me/7207254731" target="_blank">72072 54731</a></p>
     </div>
     <div class="container">
         <div class="game-overlay" id="game-overlay">
@@ -57,7 +67,10 @@
                 <div class="next-bricks-frame">
                     <canvas id="next-bricks" width="120" height="240"></canvas>
                 </div>
-                <h1 class="advanced-heading">Tetris</h1>
+                <div class="logo-box">
+                    <img src="../images/logo_no_bg.png" alt="" srcset="" width="100px" height="100px">
+                    <h1 class="advanced-heading">Tetris</h1>
+                </div>
                 <div id="score">Score: <span>0</span></div>
                 <button id="start-button" class="btn btn-start" onclick="playButtonClicked();">Start</button>
                 <button id="pause-button" class="btn btn-pause" onclick="togglePause();">Pause</button>
@@ -66,7 +79,7 @@
     </div>
     <!-- Right Advertisement -->
     <div class="advertisement right" style="right: 10px;">
-        <p>For Advertisements ping to me <a href="https://wa.me/8889997776" target="_blank">8889997776</a></p>
+        <p>For Advertisements ping to me <a href="https://wa.me/7207254731" target="_blank">72072 54731</a></p>
     </div>
     <audio id="clearsound" src="sound/pop.ogg" preload="auto"></audio>
     <script src="js/tetris.js"></script>

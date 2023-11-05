@@ -8,6 +8,17 @@ html, body {
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
 }
+.background_logo{
+  position: absolute;
+  z-index: 111;
+  opacity: .03;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
 
 .heading:after {
   content: "";
