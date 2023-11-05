@@ -17,6 +17,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+// Check if "soundCheck" is not in localStorage
+if (!localStorage.getItem("soundCheck")) {
+    // If not present, set it to true
+    localStorage.setItem("soundCheck", "true");
+  }
+  
+
 const canvas = document.getElementById("cursorcanvas");
 const ctx = canvas.getContext('2d');
 

@@ -1,9 +1,22 @@
+window.onload = function () {
+    // Get the button element
+    const toggleSoundButton = document.getElementById('toggleSoundButton');
+    toggleSoundButton.value = soundEnabled ? "Mute" : "Unmute"
+};
+
 const playerImage = "eagle.jpg";
 const computerImage = "snake.jpg";
 const blankImage = "game3.jpg";
 
 // Add a variable to track the sound state
-let soundEnabled = true;
+let soundEnabled;
+
+if (!localStorage.getItem("muted")) {
+    localStorage.setItem("muted", "false");
+    soundEnabled = true;
+} else {
+    soundEnabled = localStorage.getItem("muted") == 'true' ? false : true;
+}
 
 var pause = 0;
 var all = 0;
@@ -365,16 +378,15 @@ function toggleSound() {
     // Get the audio element
     const clickSound = document.getElementById('clickSound');
 
-    // Get the button element
-    const toggleSoundButton = document.getElementById('toggleSoundButton');
-
     // Update the button text based on sound state
     if (soundEnabled) {
         toggleSoundButton.value = "Mute";
+        localStorage.setItem("muted", "false");
         if (clickSound) {
             clickSound.play();
         }
     } else {
         toggleSoundButton.value = "Unmute";
+        localStorage.setItem("muted", "true");
     }
 }

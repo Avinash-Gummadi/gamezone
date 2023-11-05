@@ -46,6 +46,35 @@ body {
 }
 
 /* Style the game header */
+.game-header {
+    display: flex;
+    align-items: center;
+}
+
+.game-header img {
+    width: 140px;
+    height: 120px;
+    animation: vibrate 0.3s infinite;
+  }
+  
+  @keyframes vibrate {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(3px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-3px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }  
+
 .game-header h1 {
     font-size: 48px;
     color: #008CBA;
@@ -65,10 +94,11 @@ body {
 /* Adjust the width of the game board and game info */
 .game-board {
     flex: 1;
-    margin-right: 20px; /* Add some spacing between game board and game info */
+    margin-right: 20px;
+    /* Add some spacing between game board and game info */
 }
 
-.game-stash{
+.game-stash {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -136,6 +166,7 @@ input[type="button"] {
     0%, 100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
@@ -197,11 +228,15 @@ input[type="button"] {
 .cell img {
     border-radius: 10px;
 }
+
 #table-board-id.disabled {
-    pointer-events: none; /* Disable pointer events */
-    cursor: not-allowed; /* Change cursor to 'not-allowed' */
+    pointer-events: none;
+    /* Disable pointer events */
+    cursor: not-allowed;
+    /* Change cursor to 'not-allowed' */
 }
-#table-board-id.disabled .cell img{
+
+#table-board-id.disabled .cell img {
     cursor: not-allowed;
 }
 
@@ -222,15 +257,18 @@ input[type="button"] {
 .win-message {
     background-color: #4CAF50;
 }
+
 .los-message {
     background-color: #d00b0b;
 }
+
 .tie-message {
     background-color: #ffa500;
 }
-.error-msg{
+
+.error-msg {
     display: block;
-    color: #d00b0b;
+    color: #fff;
     text-align: center;
     margin: auto;
     margin-top: 15px;

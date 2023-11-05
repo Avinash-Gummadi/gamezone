@@ -538,6 +538,11 @@ body {
     border-radius: 50%;
     transform: rotate(345deg);
 }
+.animate-img1 {
+	left: 1100px;
+	opacity: 0.03;
+	pointer-events: none;
+}
 
 .ads-h1 {
     font-size: 2rem;
