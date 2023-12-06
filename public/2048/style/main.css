@@ -8,7 +8,8 @@ html, body {
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
 }
-.background_logo{
+
+.background_logo {
   position: absolute;
   z-index: 111;
   opacity: .03;
@@ -1029,5 +1030,17 @@ hr {
 
   .game-message .lower {
     margin-top: 30px !important;
+  }
+
+  .game-box-flex, .game-about {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .game-about {
+    justify-content:flex-start;
+    height: 350px;
+  }
+  .background_logo {
+    width: 360px;
   }
 }
