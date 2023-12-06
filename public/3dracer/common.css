@@ -4,6 +4,7 @@ body {
     background-image: url('../images/background3.jpg');
     background-size: cover;
 }
+
 .container {
     width: 1000px;
     margin: auto;
@@ -25,10 +26,12 @@ body {
     animation: spin 4s linear infinite;
     margin: 0;
 }
+
 @keyframes spin {
     0% {
         transform: rotateY(0deg);
     }
+
     100% {
         transform: rotateY(360deg);
     }
@@ -45,9 +48,11 @@ body {
     0% {
         transform: rotateY(0deg) translateX(600px) translateZ(-100px);
     }
+
     25% {
         transform: rotateY(-180deg) translateX(600px) translateZ(-100px);
     }
+
     100% {
         transform: rotateY(0deg) translateX(0) translateZ(0);
     }
@@ -203,7 +208,7 @@ input[type="range"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f2f2f2;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 /* Style the select arrow */
@@ -260,39 +265,121 @@ tr:hover {
     align-items: center;
     animation: pulse 2s infinite;
     transform: scale(0.95);
-  }
-  
-  /* Define styles for the message container */
-  .message-container {
+}
+
+/* Define styles for the message container */
+.message-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  /* Define styles for the message */
-  .message {
+}
+
+/* Define styles for the message */
+.message {
     color: white;
     font-size: 1.5em;
-  }
-  
-  /* Define styles for the performance status */
-  .performance-status {
+}
+
+/* Define styles for the performance status */
+.performance-status {
     color: #fff;
     font-size: 1.5em;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
     margin-left: 5px;
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0% {
-      transform: scale(0.95);
+        transform: scale(0.95);
     }
+
     50% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     100% {
-      transform: scale(0.95);
+        transform: scale(0.95);
     }
-  }  
-  
+}
+
+.ctrl-btn {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 520px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #racer {
+        margin-left: 0;
+        width: 970px;
+        height: 1570px;
+    }
+
+    #hud {
+        width: 970px;
+    }
+
+    #controls {
+        display: none;
+        font-size: 1.9em;
+        width: 25em;
+    }
+
+    #instructions {
+        display: none;
+    }
+
+    .ctrl-btn {
+        padding: 15px;
+        margin: 10px;
+        font-size: 1.9em;
+    }
+
+    #mute {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        margin-left: 20em;
+        top: 110px;
+        left: 310px;
+        background-size: cover;
+    }
+
+    #mute.on {
+        background-position: -80px 0px;
+    }
+
+    .advertisement.right {
+        display: none;
+    }
+
+    .advertisement.left {
+        animation: none;
+        transform: rotate(90deg);
+        left: 235px !important;
+        background-image: none;
+        font-size: 1.6rem;
+    }
+
+    .advertisement.left p {
+        background: linear-gradient(140deg, #e40505, #0005ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .advertisement.left a {
+        color: #f00;
+    }
+}

@@ -319,7 +319,7 @@ function process() {
     }
     if (all == 3) {
         if (messageBox) {
-            messageBox.innerHTML = '<div class="message-container tie-message"><span>We tied.</span></div>'
+            messageBox.innerHTML = '<div class="message-container tie-message"><span>Tie.</span></div>'
         }
         ts++;
     }

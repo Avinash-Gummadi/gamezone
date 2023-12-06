@@ -14,7 +14,7 @@
     content="Welcome to the ultimate car racing game! Immerse yourself in the adrenaline-pumping world of high-speed racing. Choose your dream car, master challenging tracks, and compete against other players. Experience the thrill of car racing and compete to become the ultimate champion. Start your engines and race to victory!">
   <meta property="og:image" content="https://games.crazytechbytes.com/images/social_media.png">
   <meta property="og:url" content="https://games.crazytechbytes.com/3dracer/">
-  <title>3D Racer</title>
+  <title>3D Racer | CrazyTechBytes</title>
   <link href="common.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="../rootcss/advert.css">
   <link rel="shortcut icon" href="../images/fevicon_no_bg.ico" type="image/x-icon">
@@ -30,7 +30,8 @@
       <img src="../images/logo_no_bg.png" alt="" srcset="">
       <h1 class="heading">3D Racer</h1>
     </div>
-    <table id="controls" class="game-options">
+    <button class="ctrl-btn" id="controls_btn" onclick="controlHandle()">Show Controls</button>
+    <table id="controls" class="game-options" style="display: none;">
       <tr>
         <th><label for="resolution">Resolution :</label></th>
         <td>
@@ -703,7 +704,8 @@
     //=========================================================================
 
   </script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z919LB7J96"></script>
+  <script src="../rootjs/GAmanager.js?v=1"></script>
 </body>
 
 </html>
